@@ -1,7 +1,9 @@
-import http from 'http';
+const http = require('http');
 
-export function keepAlive() {
+function keepAlive() {
   http.createServer((req, res) => {
     res.end('FlashMoon Connect ON !');
-  }).listen(8080, '0.0.0.0');
+  }).listen(process.env.PORT || 8080, '0.0.0.0');
 }
+
+module.exports = { keepAlive };
