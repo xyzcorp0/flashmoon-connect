@@ -1,4 +1,5 @@
 require('dotenv').config();
+keepAlive();
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
 
 const TOKEN = process.env.DISCORD_TOKEN;
