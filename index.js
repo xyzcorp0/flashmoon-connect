@@ -1,6 +1,8 @@
 require('dotenv').config();
-keepAlive();
 const { Client, GatewayIntentBits, ActivityType } = require('discord.js');
+const { keepAlive } = require('./keep_alive');
+
+keepAlive();
 
 const TOKEN = process.env.DISCORD_TOKEN;
 const FIVEM_SERVER = process.env.FIVEM_SERVER;
@@ -61,7 +63,7 @@ async function updatePresence() {
   }
 }
 
-client.once('ready', () => {
+client.once('clientReady', () => {
   console.log(`🤖 Connecté en tant que ${client.user.tag}`);
   updatePresence();
   setInterval(updatePresence, INTERVAL);
