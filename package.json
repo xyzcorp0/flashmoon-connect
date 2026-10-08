@@ -1,0 +1,16 @@
+{
+  "name": "fivem-presence-bot",
+  "version": "1.0.0",
+  "description": "Bot Discord qui affiche le statut d'un serveur FiveM (joueurs connectés)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
